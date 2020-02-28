@@ -3,7 +3,7 @@ package core
 /**
  * This is the basic structure to use and define macros.
  * First of all, you need to define macros in another compilation round.
- * In general, is preffered to keep all macros separated from standard source code.
+ * In general, is preferred to keep all macros separated from the standard source code.
  * To use def macros, you need to indicate the expansion to call preceded by macro keyword.
  */
 object Example0 extends App {
@@ -91,7 +91,7 @@ object Example5 extends App {
 /**
  * Example of macro annotations.
  * It is a very powerful mechanism that opens a new perspective.
- * With this technique is possible to add methods at compile time, do structural checking on the annotated concept and so on.
+ * With this technique it is possible to add methods at compile time, do structural checking on the annotated concept and so on.
  * It this case the foo annotation adds a method called foo, which doesn't do anything special.
  */
 object Example6 extends App {

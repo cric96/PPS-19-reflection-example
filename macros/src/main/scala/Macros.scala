@@ -37,13 +37,13 @@ object Macros {
   }
 
   /**
-   * This function creates, for each value in the object, a couple of name, value.
+   * This function creates, for each value in the object, a name-value pair.
    * This example could be expanded to create JSON from some object.
    */
   def tokenizer(c : Whitebox)(obj : c.Expr[Any]) : c.Expr[String] = {
     import c.universe._
     val ast = obj.tree
-    //from an objecr, gets all accessor
+    //from an object, retrieves all his getters
     val getters = ast match {
       case Select(_, _) =>
         val tpeDeclaration = ast.tpe.members
@@ -89,8 +89,8 @@ object Annotations {
   }
 
   /**
-   * Similar to tokenizer macro, these annotations allow creating a set of token
-   * based on values of an object.
+   * Similar to tokenizer macro, these annotations allow to create a set of tokens
+   * based on the values of an object.
    * In this case, the annotations add a value called tokens that contains
    * a tuple of the value defined in the class.
    */
